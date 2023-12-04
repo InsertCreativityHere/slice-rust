@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "slice-build",
+    "slice-codegen",
+    "slice-derive",
+    "slice-encoding",
+]

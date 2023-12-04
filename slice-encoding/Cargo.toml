@@ -1,0 +1,22 @@
+[package]
+name = "slice-encoding"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+# THIS IS THE TRUE LINE default = ["slice2", "std"]
+default = ["slice2", "slice1", "std"]
+
+# Provides support for the Slice2 encoding.
+slice2 = []
+
+# Provides support for the Slice1 encoding.
+slice1 = []
+
+# Provides implementations for encoding and decoding common standard library types like `HashMap<K, V>`.
+# Requires a dependency on the Rust standard library.
+std = ["alloc"]
+
+# Provides implementations for decoding common types that require dynamic allocations like `Vec` and `String`.
+# Requires host applications to configure a global allocator, if the 'std' feature is unset.
+alloc = []
